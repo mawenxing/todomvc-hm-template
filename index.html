@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Template • TodoMVC</title>
+    <!-- 1. 引入的基本样式 -->
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <section class="todoapp">
+      <!-- 头部 -->
+      <header class="header">
+        <h1>todos</h1>
+        <input
+          class="new-todo"
+          placeholder="What needs to be done?"
+          autofocus
+        />
+      </header>
+
+      <!-- 主体 -->
+      <section class="main">
+        <input id="toggle-all" class="toggle-all" type="checkbox" />
+        <label for="toggle-all">Mark all as complete</label>
+        <ul class="todo-list">
+          <!-- These are here just to show the structure of the list items -->
+          <!-- List items should get the class `editing` when editing and `completed` when marked as completed -->
+          <li class="completed">
+            <div class="view">
+              <input class="toggle" type="checkbox" checked />
+              <label>Taste JavaScript</label>
+              <button class="destroy"></button>
+            </div>
+            <input class="edit" value="Create a TodoMVC template" />
+          </li>
+          <li>
+            <div class="view">
+              <input class="toggle" type="checkbox" />
+              <label>Buy a unicorn</label>
+              <button class="destroy"></button>
+            </div>
+            <input class="edit" value="Rule the web" />
+          </li>
+        </ul>
+      </section>
+
+      <!-- 底部 -->
+      <footer class="footer">
+        <!-- 剩余完成数 -->
+        <span class="todo-count"><strong>0</strong> item left</span>
+        <!-- 过滤是否完成任务 -->
+        <ul class="filters">
+          <li>
+            <a class="selected" href="#/">All</a>
+          </li>
+          <li>
+            <a href="#/active">Active</a>
+          </li>
+          <li>
+            <a href="#/completed">Completed</a>
+          </li>
+        </ul>
+        <!-- 清除已完成 -->
+        <button class="clear-completed">Clear completed</button>
+      </footer>
+    </section>
+
+    <!-- JS 逻辑部分 -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
